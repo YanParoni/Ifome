@@ -139,7 +139,7 @@ function RecipesId({ match }) {
     }
     getApi();
   }, [dispatch, id, typeDrinkorMeal]);
-
+  const urlVideo = video.replace('watch?v=', 'embed/');
   return (
     <div className="container ">
       <div className="row">
@@ -188,7 +188,7 @@ function RecipesId({ match }) {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen className='col-12 m-5' width="420" height="400"
-src={video}>
+src={urlVideo}>
 </iframe> 
       }</div>
       </div>
