@@ -79,7 +79,7 @@ function ShareAndFavorite({
       ) }
       { share && (
         <button
-        className='btn btn-default m-5'
+        className='btn btn-default '
           type="button"
           src={ shareIcon }
           data-testid={ testShare }

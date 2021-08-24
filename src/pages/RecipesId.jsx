@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import YouTube from 'react-youtube';
 import { apiDetailsId } from '../service/apiDetailsId';
 import Recomendation from '../components/Detail/Recomendation';
 import ButtonStart from '../components/Detail/ButtonStart';
@@ -154,11 +153,10 @@ function RecipesId({ match }) {
       </div>
 
       <div className="row">
-        <h1 className="col-8 xl-8 offset-2 recipe-title" data-testid="recipe-title">
+        <h1 className="col-8 xl-8  recipe-title" data-testid="recipe-title">
           {title}
         </h1>
         <ShareAndFavorite
-        className='col-8 xl-8'
         share
         favorite
         data={dataApi[mealsOrDrinks]}
@@ -170,14 +168,30 @@ function RecipesId({ match }) {
       </div>
 
     
-      <span data-testid="recipe-category">{category}</span>
+      <h2 className='m-5 recipe-title' data-testid="recipe-category ">Type of dish: {category}</h2>
+      <h2>Ingredients</h2>
+      <ul className='list-group list-group-flush mb-5 '>
+
       {ingredient.map((item, index) => (
-        <span data-testid={`${index}-ingredient-name-and-measure`} key={index}>
+        <li className='list-group-item' data-testid={`${index}-ingredient-name-and-measure`} key={index}>
           {item}
-        </span>
+        </li >
       ))}
-      <span data-testid="instructions">{instructions}</span>
-      {video && <YouTube videoId={video} />}
+              </ul>
+
+        <h2>Instructions</h2>
+        
+      <span className='m-5 recipe-title' data-testid="instructions">{instructions}</span>
+      <div className='container-fluid'>
+          <div className='row'>
+      {video &&  <iframe   title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen className='col-12 m-5' width="420" height="400"
+src={video}>
+</iframe> 
+      }</div>
+      </div>
       <Recomendation
         recomendInverse={typeDrinkorMeal === 'comidas' ? 'meals' : 'drinks'}
       />
