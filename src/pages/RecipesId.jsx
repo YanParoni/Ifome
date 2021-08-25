@@ -123,7 +123,6 @@ function RecipesId({ match }) {
       });
     }
   }
-
   if (update === true) {
     getReduxMealsOrDrinks();
   }
@@ -181,16 +180,20 @@ function RecipesId({ match }) {
 
         <h2>Instructions</h2>
         
-      <span className='m-5 recipe-title' data-testid="instructions">{instructions}</span>
-      <div className='container-fluid'>
+      <span className='mt-5 recipe-title' data-testid="instructions">{instructions}</span>
+      <div className='container'>
           <div className='row'>
+            <div className='col-12'>
       {video &&  <iframe   title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen className='col-12 m-5' width="420" height="400"
+                allowfullscreen className='col-12 mt-5' width="420" height="450"
 src={urlVideo}>
+  
 </iframe> 
-      }</div>
+      }
+      </div>
+      </div>
       </div>
       <Recomendation
         recomendInverse={typeDrinkorMeal === 'comidas' ? 'meals' : 'drinks'}

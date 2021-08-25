@@ -1,3 +1,9 @@
+@media only screen and (max-width: 766px) {
+  .recomendation {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: Futura;
   font-size: 50;
@@ -92,7 +98,12 @@ button img {
 
 .rec-name{
   color:#F7968F;
-font-size: large;
+font-size: 2rem;
+}
+
+.recomendation{
+  color:#F7968F;
+font-size: 2rem;
 }
 
 .recipe-title {

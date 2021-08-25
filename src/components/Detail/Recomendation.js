@@ -31,7 +31,7 @@ function RecomendationDrink({ recomendInverse }) {
               src={strDrinkThumb}
               alt={strDrink}
             />
-              <h2 data-testid={`${index}-recomendation-title`}>
+              <h2 className='recomendation' data-testid={`${index}-recomendation-title`}>
                 {strDrink}
               </h2>
             </div>
@@ -49,16 +49,16 @@ function RecomendationDrink({ recomendInverse }) {
       <Carousel>
         {recomendation.map(({ strMealThumb, strMeal }, index) => (
           <Carousel.Item>
-            <div className='container rec-name'>
+            <div className='container '>
             <div className="row">
-            <div className='col-12 offset-3'>
+            <div className='col-12 '>
             <img
-              className="d-block w-50 "
+              className="d-block w-50"
               data-testid={`${index}-recomendation-card`}
               src={strMealThumb}
               alt={strMeal}
             />
-              <h2 data-testid={`${index}-recomendation-title`}>
+              <h2  data-testid={`${index}-recomendation-title`}>
                 {strMeal}
               </h2>
             </div>

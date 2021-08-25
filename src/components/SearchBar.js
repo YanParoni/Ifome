@@ -24,6 +24,7 @@ function SearchBar({ mealOrDrink }) {
   return (
     <div className="container">
       <input
+        className='form-control'
         type="text"
         placeholder="Buscar Receita"
         data-testid="search-input"
@@ -31,6 +32,7 @@ function SearchBar({ mealOrDrink }) {
         onChange={ ({ target }) => setSearch(target.value) }
       />
       <button
+        className='btn btn-default '
         data-testid="exec-search-btn"
         type="button"
         onClick={ async () => {
@@ -42,7 +44,9 @@ function SearchBar({ mealOrDrink }) {
       >
         Buscar
       </button>
+      
       <input
+        className='form-check'
         type="radio"
         data-testid="ingredient-search-radio"
         value="ingrediente"
