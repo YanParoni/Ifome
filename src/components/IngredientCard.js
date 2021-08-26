@@ -25,13 +25,18 @@ function IngredientCard({ name, index, comidasOuBebidas }) {
       data-testid={ `${index}-ingredient-card` }
       onClick={ () => filterIngredient(name) }
     >
+    
+      <div className='explore-card col-6'>
       <img
+        className='col-12'
         src={ typeMoD }
         alt={ name }
         data-testid={ `${index}-card-img` }
-        width="30px"
+        width="15%"
       />
-      <p data-testid={ `${index}-card-name` }>{ name }</p>
+      <p className='rec-name' data-testid={ `${index}-card-name` }>{ name }</p>
+      </div>
+     
     </Link>
   );
 }

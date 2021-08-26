@@ -20,18 +20,27 @@ function IngredienteBebida() {
   return (
     <div>
       <Header title="Explorar Ingredientes" />
+      <div className='container'>
+            <div className='row'>
+              <div className='col-6'>
       { drinks !== undefined
         && drinks.slice(0, magicNumber).map((
           {
             strIngredient1 }, index,
         ) => (
+         
           <IngredientCard
             name={ strIngredient1 }
             key={ index }
             index={ index }
             comidasOuBebidas="bebidas"
           />
+          
+
         )) }
+        </div>
+        </div>
+          </div>
       <Footer />
     </div>
   );
