@@ -26,37 +26,48 @@ function Explore({ localOrigin, mealOrDrink }) {
 
   const random = checker();
   return (
-    <div>
-      <button
-        type="button"
-        data-testid="explore-by-ingredient"
-        onClick={ () => {
-          history.push(`/explorar/${mealOrDrink}/ingredientes`);
-        } }
-      >
-        Por Ingredientes
-      </button>
-      { localOrigin && (
-        <button
-          type="button"
-          data-testid="explore-by-area"
-          onClick={ () => {
-            history.push(`/explorar/${mealOrDrink}/area`);
-          } }
-        >
-          Por Local de Origem
-        </button>
-      ) }
+    <div className="container">
+      <div className="row">
+        <div className="explore-card col-12">
+          <button
+            className="btn col-12"
+            type="button"
+            data-testid="explore-by-ingredient"
+            onClick={() => {
+              history.push(`/explorar/${mealOrDrink}/ingredientes`);
+            }}
+          >
+            <span className="rec-name">Por Ingredientes </span>
+          </button>
+        </div>
 
-      <button
-        type="button"
-        data-testid="explore-surprise"
-        onClick={ () => {
-          history.push(`/${mealOrDrink}/${random}`);
-        } }
-      >
-        Me Surpreenda!
-      </button>
+        {localOrigin && (
+          <div className="explore-card col-12">
+            <button
+              className="btn col-12"
+              type="button"
+              data-testid="explore-by-area"
+              onClick={() => {
+                history.push(`/explorar/${mealOrDrink}/area`);
+              }}
+            >
+              <span className="rec-name"> Por Local de Origem </span>
+            </button>
+          </div>
+        )}
+        <div className="explore-card col-12">
+          <button
+            className="btn col-12"
+            type="button"
+            data-testid="explore-surprise"
+            onClick={() => {
+              history.push(`/${mealOrDrink}/${random}`);
+            }}
+          >
+            <span className="rec-name">Me Surpreenda!</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
