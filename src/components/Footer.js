@@ -10,7 +10,7 @@ function Footer() {
   const history = useHistory();
   const dispatch = useDispatch();
   return (
-    <div className="container-fluid">
+    <div className="container-fluid fixed-bottom">
       <footer className="row" data-testid="footer">
         <button
           className="btn btn-default col-4"

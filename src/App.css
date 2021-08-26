@@ -11,8 +11,13 @@
   src: url('/fonts/Futura Bold font.ttf');
 }
 
+body {
+  font-family: Futura;
+  background-color: #f2f2f2;
+}
+
 .btn-default {
-  background-color: white;
+  background-color: #f2f2f2;
   border-color: #f07167;
   color: #f07167;
   margin-top: 4px;
@@ -28,8 +33,6 @@ button img {
     brightness(100%) contrast(88%);
 }
 
-
-
 .meal {
   margin-left: 1px;
   margin-right: 1px;
@@ -42,15 +45,15 @@ button img {
 
 .recipe-card img {
   border-radius: 90% 10% 56% 44% / 62% 73% 27% 38%;
-  box-shadow: rgba(0.07) 1px 1px , rgba(0.07) 2px 2px ,
-    rgba(0.07) 4px 4px , rgba(0.07) 8px 8px , rgba(0.07) 16px 16px;
+  box-shadow: rgba(0.07) 1px 1px, rgba(0.07) 2px 2px, rgba(0.07) 4px 4px,
+    rgba(0.07) 8px 8px, rgba(0.07) 16px 16px;
   margin-top: 10px;
 }
 
 .recipe-card img:hover {
   box-shadow: rgba(247, 246, 246, 0.4) 5px 5px,
-    rgba(228, 135, 145, 0.3) 10px 10px , rgba(228, 135, 145, 0.2) 15px 15px ,
-    rgba(228, 135, 145, 0.1) 20px 20px , rgba(228, 135, 145, 0.5) 25px 25px ;
+    rgba(228, 135, 145, 0.3) 10px 10px, rgba(228, 135, 145, 0.2) 15px 15px,
+    rgba(228, 135, 145, 0.1) 20px 20px, rgba(228, 135, 145, 0.5) 25px 25px;
   transform: scale(1.09);
   transition: 0.3s;
 }
@@ -63,8 +66,8 @@ button img {
 
 .recipe-photo {
   border-radius: 48% 52% 34% 66% / 39% 33% 67% 61%;
-  box-shadow: rgba(50, 5, 93 , 0.25) 50px 100px -20px ,
-    rgba(0.3) 30px 60px -30px , rgba(10, 37, 64, 0.35) -2px 6px  inset;
+  box-shadow: rgba(50, 5, 93, 0.25) 50px 100px -20px, rgba(0.3) 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) -2px 6px inset;
 }
 
 .rec {
@@ -74,38 +77,60 @@ button img {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  
   background-size: 100%, 100%;
   background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
   content: '>';
-  font-size: 55px;
-  color:#F7968F
+  font-size: 60px;
+  color: #f7968f;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
-  font-size: 55px;
-  color: #F7968F
+  font-size: 60px;
+  color: #f7968f;
 }
 
-.carousel-indicators li{
-  background-color: #F7968F;
+.carousel-indicators li {
+  background-color: #f7968f;
 }
 
-.rec-name{
-  color:#F7968F;
-font-size: 2rem;
+.rec-name {
+  color: #f7968f;
+  font-size: 2rem;
 }
 
-.recomendation{
-  color:#F7968F;
-font-size: 2rem;
+.recomendation {
+  color: #f7968f;
+  font-size: 2rem;
 }
 
 .recipe-title {
   text-align: center;
+}
+
+.form-control {
+  background-color: #f2f2f2;
+  border-color: #f7968f;
+}
+
+.explore-card {
+  -webkit-box-shadow: 0px 12px 0px -8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 12px 0px -8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  padding: 2px 16px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.explore-card:hover {
+  -webkit-box-shadow: 5px 5px 0px 0px #0000, 10px 10px 0px 0px #5fb8ff,
+    15px 15px 0px 0px #a1d8ff, 20px 20px 0px 0px #cae6ff,
+    25px 25px 0px 0px #e1eeff, 0px 12px 0px -8px rgba(0, 0, 0, 0);
+  
+    box-shadow: 5px 5px 0px 0px #F7968F, 10px 10px 0px 0px #f4a49f,
+    15px 15px 0px 0px #f79d96, 20px 20px 0px 0px #f49b95,
+    25px 25px 0px 0px #f99e98, 0px 12px 0px -8px #ffa6a0;
 }
